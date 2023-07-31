@@ -1,15 +1,57 @@
 ---
+import Navigation from "../sections/frontpage/Navigation.astro"
 ---
 
 <html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Astro</title>
+  </head>
+  <body>
+   <Navigation />
+    <section>
+      <div>
+        <h1>Welcome to The Frontpage!</h1>
+        <button>Learn more about this</button>
+      </div>
+    </section>
+	<section>
+		<h3>Our People</h3>
+		<div class="flex">
+			<div>
+				<div>
+					<h4>Person 1</h4>
+					<p>This is person 1</p>
+				</div>
+			</div>
+			<div>
+				<div>
+					<h4>Person 2</h4>
+					<p>This is person 2</p>
+				</div>
+			</div>
+			<div>
+				<div>
+					<h4>Person 3</h4>
+					<p>This is person 3</p>
+				</div>
+			</div>
+		</div>
+	</section>
+    <footer>
+      <div>
+        <h3>Footer</h3>
+      </div>
+    </footer>
+  </body>
 </html>
+
+<style>
+	body {
+		margin: 0;
+	}
+
+</style>
