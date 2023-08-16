@@ -1,0 +1,12 @@
+nav {
+    width: 100%;
+    min-height: 2rem;
+    background-color: #333;
+  }
+  .logo {
+    width: 70%;
+    max-width: 500px;
+  }
+  ul {
+    list-style: none;
+  }

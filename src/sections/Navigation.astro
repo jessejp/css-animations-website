@@ -1,7 +1,13 @@
-<nav>
+---
+import "../utils.css";
+import "../Navigation.css";
+---
+
+<nav class="flex">
   <svg
-    width="800px"
-    height="800px"
+    class="logo"
+    width="500px"
+    height="500px"
     viewBox="0 0 16 16"
     version="1.1"
     xmlns="http://www.w3.org/2000/svg"
@@ -21,19 +27,27 @@
     </g>
   </svg>
   <div>
-    <ul>
+    <ul class="flex">
       <li><a href="">The Otherpage</a></li>
       <li><a href="">The Otherpage</a></li>
       <li><a href="">The Otherpage</a></li>
       <li><a href="">The Otherpage</a></li>
     </ul>
+    <div>
+      <div class="">
+        <h4>Some text </h4>
+        <p>
+          Lorem ipsum dolor sit amet consec, tetur adipisicing elit. Quisquam,
+          voluptatibus.
+        </p>
+      </div>
+    </div>
   </div>
 </nav>
 
 <style>
-  nav {
-    width: 100%;
-    min-height: 2rem;
-    background-color: #333;
+  li a {
+    text-decoration: none;
+    color: #ffffff;
   }
 </style>
