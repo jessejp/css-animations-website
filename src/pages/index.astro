@@ -1,6 +1,8 @@
 ---
-import Navigation from "../sections/Navigation.astro"
-import Hero from "../sections/Hero.astro"
+import Navigation from "../sections/Navigation.astro";
+import Hero from "../sections/Hero.astro";
+import People from "../sections/People.astro";
+import HoverCard from "../sections/HoverCard.astro";
 ---
 
 <html lang="en">
@@ -12,31 +14,10 @@ import Hero from "../sections/Hero.astro"
     <title>Astro</title>
   </head>
   <body>
-   <Navigation />
-   <Hero />
-	<section>
-		<h3>Our People</h3>
-		<div class="flex">
-			<div>
-				<div>
-					<h4>Person 1</h4>
-					<p>This is person 1</p>
-				</div>
-			</div>
-			<div>
-				<div>
-					<h4>Person 2</h4>
-					<p>This is person 2</p>
-				</div>
-			</div>
-			<div>
-				<div>
-					<h4>Person 3</h4>
-					<p>This is person 3</p>
-				</div>
-			</div>
-		</div>
-	</section>
+    <Navigation />
+    <Hero />
+    <People />
+	<HoverCard />
     <footer>
       <div>
         <h3>Footer</h3>
@@ -46,8 +27,7 @@ import Hero from "../sections/Hero.astro"
 </html>
 
 <style>
-	body {
-		margin: 0;
-	}
-
+  body {
+    margin: 0;
+  }
 </style>

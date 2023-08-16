@@ -1,0 +1,20 @@
+---
+const people = await Astro.glob("../people/*.md");
+---
+
+<section>
+  <h2>Our People</h2>
+  <div class="flex">
+    {
+      people.map((person) => (
+        <div>
+          <div>
+            <img src={person.frontmatter.image} />
+            <h3>{person.frontmatter.name}</h3>
+            <p>{person.frontmatter.role}</p>
+          </div>
+        </div>
+      ))
+    }
+  </div>
+</section>
