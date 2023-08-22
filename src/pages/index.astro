@@ -2,7 +2,7 @@
 import Navigation from "../sections/Navigation.astro";
 import Hero from "../sections/Hero.astro";
 import People from "../sections/People.astro";
-import HoverCard from "../sections/HoverCard.astro";
+import Footer from "../sections/Footer.astro";
 ---
 
 <html lang="en">
@@ -12,17 +12,15 @@ import HoverCard from "../sections/HoverCard.astro";
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
     <title>Astro</title>
+    <script type="module" defer>
+      import "https://flackr.github.io/scroll-timeline/dist/scroll-timeline.js";
+    </script>
   </head>
   <body>
     <Navigation />
     <Hero />
     <People />
-	<HoverCard />
-    <footer>
-      <div>
-        <h3>Footer</h3>
-      </div>
-    </footer>
+    <Footer />
   </body>
 </html>
 

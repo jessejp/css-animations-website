@@ -1,9 +1,8 @@
 ---
 import "../utils.css";
-import "../Navigation.css";
 ---
 
-<nav class="flex">
+<nav class="">
   <svg
     class="logo"
     width="500px"
@@ -26,7 +25,7 @@ import "../Navigation.css";
       ></path>
     </g>
   </svg>
-  <div>
+  <div class="nav-content">
     <ul class="flex">
       <li><a href="">The Otherpage</a></li>
       <li><a href="">The Otherpage</a></li>
@@ -35,7 +34,7 @@ import "../Navigation.css";
     </ul>
     <div>
       <div class="">
-        <h4>Some text </h4>
+        <h4>Some text</h4>
         <p>
           Lorem ipsum dolor sit amet consec, tetur adipisicing elit. Quisquam,
           voluptatibus.
@@ -44,10 +43,59 @@ import "../Navigation.css";
     </div>
   </div>
 </nav>
+<div class="nav-block"></div>
 
 <style>
+  .nav-block {
+    height: 50vh;
+  }
+  nav {
+    display: flex;
+    position: fixed;
+    inset: 0 0 auto;
+    width: 100%;
+    min-height: 2rem;
+    max-height: 50vh;
+    background-color: #333;
+    padding: 0.5rem 0;
+    justify-content: space-between;
+  }
+  .logo {
+    height: 40vh;
+    width: fit-content;
+    max-width: 500px;
+    max-height: 500px;
+  }
+  .nav-content {
+    position: static;
+    width: 50%;
+  }
+  ul {
+    list-style: none;
+    position: relative;
+    inset: 0 0rem auto auto;
+  }
   li a {
     text-decoration: none;
     color: #ffffff;
   }
 </style>
+
+<script define:vars="">
+  const logo = document.querySelector(".logo");
+  logo.animate(
+    {
+      height: ["40vh", "10vh"],
+    },
+    {
+      duration: 1,
+      timeline: new ScrollTimeline({
+        source: document.scrollingElement,
+        orientation: 'block',
+      }),
+      fill: 'both',
+      rangeStart: {offset: new CSSUnitValue(0, "%") },
+      rangeEnd: {offset: new CSSUnitValue(18, "%") },
+    }
+  );
+</script>

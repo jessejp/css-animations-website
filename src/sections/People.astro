@@ -2,19 +2,33 @@
 const people = await Astro.glob("../people/*.md");
 ---
 
-<section>
-  <h2>Our People</h2>
-  <div class="flex">
-    {
-      people.map((person) => (
-        <div>
-          <div>
+<section class="centered-margin">
+  <div class="inner-container">
+    <h2>Our People</h2>
+    <div class="flex">
+      {
+        people.map((person) => (
+          <div class="person-card">
             <img src={person.frontmatter.image} />
             <h3>{person.frontmatter.name}</h3>
             <p>{person.frontmatter.role}</p>
           </div>
-        </div>
-      ))
-    }
+        ))
+      }
+    </div>
   </div>
 </section>
+
+<style>
+  .flex {
+    gap: 2rem;
+  }
+  .person-card {
+    width: 22%;
+    min-width: 12rem;
+    max-width: 20rem;
+  }
+  .person-card img {
+    width: 100%;
+  }
+</style>
