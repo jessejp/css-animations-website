@@ -1,15 +1,31 @@
 ---
+import Navigation from "../sections/Navigation.astro";
+import Hero from "../sections/Hero.astro";
+import People from "../sections/People.astro";
+import Footer from "../sections/Footer.astro";
 ---
 
 <html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Astro</title>
+    <script type="module" defer>
+      import "https://flackr.github.io/scroll-timeline/dist/scroll-timeline.js";
+    </script>
+  </head>
+  <body>
+    <Navigation />
+    <Hero />
+    <People />
+    <Footer />
+  </body>
 </html>
+
+<style>
+  body {
+    margin: 0;
+  }
+</style>
